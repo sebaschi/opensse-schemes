@@ -23,6 +23,7 @@
 
 #include <functional>
 
+#include <string>
 //#include "sophos_client_runner.hpp"
 
 namespace sse {

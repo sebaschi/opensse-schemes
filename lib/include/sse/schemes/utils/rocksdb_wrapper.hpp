@@ -103,7 +103,6 @@ RockDBWrapper::RockDBWrapper(const std::string& path) : db_(nullptr)
 
     //        options.disableDataSync = true;
     options.allow_mmap_reads                       = true;
-    options.new_table_reader_for_compaction_inputs = true;
 
     options.allow_concurrent_memtable_write
         = options.memtable_factory->IsInsertConcurrentlySupported();
@@ -384,7 +383,6 @@ RockDBListStore<T, Serializer>::RockDBListStore(const std::string& path)
     options.max_background_compactions = 20;
 
     options.allow_mmap_reads                       = true;
-    options.new_table_reader_for_compaction_inputs = true;
 
     options.allow_concurrent_memtable_write
         = options.memtable_factory->IsInsertConcurrentlySupported();
